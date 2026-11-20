@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ÉLAN BOTANIQUE — Haute Skincare & Botanical Alchemy</title>
+  <meta name="description" content="A visually striking, high-converting luxury skincare landing page formulating high-altitude alpine rose phytocells, cold-pressed botanicals, and bio-peptides for transcendent cellular radiance." />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>" />
+
+  <!-- Google Fonts: Cormorant Garamond, Plus Jakarta Sans & Space Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="/src/styles/main.css" />
+</head>
+<body>
+  <!-- Background Noise Grain Overlay -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- Accessible Skip to Content Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Announcement Bar -->
+  <aside class="announcement-bar" role="region" aria-label="Announcements">
+    <div class="announcement-text">
+      <span class="announcement-icon" aria-hidden="true">✦</span>
+      <span id="announcement-ticker">COMPLIMENTARY WORLDWIDE SHIPPING ON ORDERS OVER $120</span>
+      <span class="announcement-icon" aria-hidden="true">✦</span>
+    </div>
+  </aside>
+
+  <!-- 1. Minimal Top Navigation Header -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <!-- Brand Logo -->
+      <a href="#" class="brand-logo" aria-label="Élan Botanique - Return to home">
+        <span class="brand-logo-text">ÉLAN BOTANIQUE</span>
+        <span class="brand-logo-sub">HAUTE SKINCARE • GENEVA & PROVENCE</span>
+      </a>
+
+      <!-- 3-4 Concise Desktop Links -->
+      <nav class="nav-menu-wrapper" role="navigation" aria-label="Primary Navigation">
+        <ul class="nav-menu">
+          <li><a href="#collection" class="nav-link">The Collection</a></li>
+          <li><a href="#features" class="nav-link">Clinical Science</a></li>
+          <li><a href="#how-it-works" class="nav-link">The Ritual</a></li>
+          <li><a href="#reviews" class="nav-link">Proof & Reviews</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions: Search, Cart Drawer, Primary CTA Button -->
+      <div class="header-actions">
+        <button class="action-icon-btn" id="header-search-btn" aria-label="Search formulations">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+
+        <div class="cart-btn-wrap">
+          <button class="action-icon-btn" data-action="open-cart" aria-label="Open your ritual bag">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+            <span class="cart-badge" id="cart-badge">0</span>
+          </button>
+        </div>
+
+        <!-- Primary CTA Button (Mobile Accessible) -->
+        <a href="#collection" class="btn btn-primary btn-gold-shimmer">Claim The Elixir</a>
+
+        <!-- Mobile Menu Trigger -->
+        <button class="mobile-menu-btn action-icon-btn" id="mobile-menu-trigger" aria-label="Toggle navigation drawer">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer" aria-hidden="true">
+    <div class="mobile-nav-header">
+      <span class="brand-logo-text">ÉLAN BOTANIQUE</span>
+      <button class="action-icon-btn" id="mobile-nav-close" aria-label="Close menu">&times;</button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="#collection" class="mobile-nav-link">The Collection</a></li>
+      <li><a href="#features" class="mobile-nav-link">Clinical Science</a></li>
+      <li><a href="#how-it-works" class="mobile-nav-link">The Ritual</a></li>
+      <li><a href="#reviews" class="mobile-nav-link">Proof & Reviews</a></li>
+      <li><a href="#ritual-finder" class="mobile-nav-link">Skin Quiz</a></li>
+      <li><a href="#faq" class="mobile-nav-link">Sanctuary FAQ</a></li>
+    </ul>
+    <div style="margin-top: auto; padding-top: 2rem; border-top: 1px solid var(--color-forest-border);">
+      <button class="btn btn-primary btn-block" data-action="open-cart">View Sacred Bag</button>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <!-- ==========================================================================
+         2. HERO SECTION: Outcome-Driven Headline under 10 words, Dual CTAs & 3D Centerpiece
+         ========================================================================== -->
+    <section class="hero-section" aria-label="Hero Showcase">
+      <div class="hero-ambient-glow glow-rose" aria-hidden="true"></div>
+      <div class="hero-ambient-glow glow-gold" aria-hidden="true"></div>
+      <div class="hero-ambient-glow glow-emerald" aria-hidden="true"></div>
+
+      <div class="container hero-grid">
+        <!-- Left Editorial Copy Column -->
+        <div class="hero-content">
+          <!-- Monospace Trust Snippet & Social Proof -->
+          <div class="hero-trust-bar">
+            <span class="mono-tag">[★ 4.97 RATING]</span>
+            <span class="mono-tag">[1,240+ VERIFIED PATRONS]</span>
+            <span class="mono-tag rose">[VOGUE DISCOVERY 2026]</span>
+          </div>
+
+          <!-- Outcome-Driven Headline (Under 10 Words) -->
+          <h1 class="hero-headline">
+            Wake Up to Transcendent <em>Cellular Radiance</em>
+          </h1>
+
+          <!-- Concise Supporting Subheadline -->
+          <p class="hero-copy">
+            A potent, 100% water-free nectar of wild-harvested Swiss Alpine rose phytocells and cold-pressed camellia. Clinically proven to repair your moisture mantle and ignite an ethereal lit-from-within glow without synthetic retinol redness.
+          </p>
+
+          <!-- Dual CTAs: Primary Action + Secondary Preview/Demo -->
+          <div class="hero-cta-group">
+            <button class="btn btn-primary btn-gold-shimmer" id="hero-shop-btn">
+              Claim Your Batch — $148
+            </button>
+            <button class="btn btn-outline" id="btn-open-ritual-modal">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              Watch 45-Second Ritual
+            </button>
+          </div>
+
+          <!-- Risk Reversal Snippet -->
+          <div class="hero-risk-reversal">
+            <span class="check">✓</span>
+            <span>30-Day Empty-Bottle Guarantee • Zero Synthetic Fillers • Free Worldwide Shipping</span>
+          </div>
+
+          <!-- Clinical Stats Row -->
+          <div class="hero-stats-row">
+            <div class="stat-item">
+              <span class="stat-value">98.4%</span>
+              <span class="stat-label">Cellular Renewal</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">100%</span>
+              <span class="stat-label">Cold-Pressed Harvest</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">72h</span>
+              <span class="stat-label">Lipid Barrier Lock</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 3D Photorealistic Skincare Bottle Centerpiece -->
+        <div class="hero-canvas-col">
+          <div class="bottle-canvas-container" id="three-bottle-canvas" role="region" aria-label="Interactive 3D Photorealistic Skincare Bottle. Drag with mouse or swipe to rotate 360 degrees.">
+            <!-- Three.js Canvas mounts here -->
+          </div>
+
+          <!-- Interactive 3D Formula Hotspots -->
+          <div class="canvas-hotspots" aria-hidden="true">
+            <div class="hotspot" style="top: 26%; left: 52%;" tabindex="0">
+              <div class="hotspot-point"></div>
+              <div class="hotspot-tooltip">
+                <span class="tooltip-title">Micro-Dose Dropper</span>
+                <span class="tooltip-desc">Rose-gold brushed collar dispensing exact 3-drop ceremonial doses.</span>
+              </div>
+            </div>
+
+            <div class="hotspot" style="top: 50%; left: 38%;" tabindex="0">
+              <div class="hotspot-point"></div>
+              <div class="hotspot-tooltip">
+                <span class="tooltip-title">Alpine Rose Phytocells</span>
+                <span class="tooltip-desc">High-altitude stem cells defending against environmental oxidative stress.</span>
+              </div>
+            </div>
+
+            <div class="hotspot" style="top: 76%; left: 62%;" tabindex="0">
+              <div class="hotspot-point"></div>
+              <div class="hotspot-tooltip">
+                <span class="tooltip-title">Heavy Borosilicate Glass</span>
+                <span class="tooltip-desc">UV-filtering luxury emerald glass preserves volatile botanical terpenes.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3D Controls Bar -->
+          <div class="canvas-controls-overlay">
+            <span class="canvas-hint">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+              Drag to Rotate 360°
+            </span>
+            <button class="canvas-control-btn" id="btn-reset-3d" title="Reset bottle camera angle">Reset</button>
+            <button class="canvas-control-btn" id="btn-pause-3d" title="Pause or resume auto-rotation">Pause</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         3. VALUE & PROOF STRIP: Monospace Metrics & Clinical Credibility
+         ========================================================================== -->
+    <section class="value-proof-strip" aria-label="Clinical Metrics and Verification">
+      <div class="container">
+        <div class="proof-metrics-grid">
+          <div class="proof-metric-item">
+            <span class="proof-metric-num">98.4%</span>
+            <span class="proof-metric-label">Immediate Cellular Radiance</span>
+            <span class="proof-metric-sub">[28-DAY BLIND PERCEPTION STUDY]</span>
+          </div>
+
+          <div class="proof-metric-item">
+            <span class="proof-metric-num">72_HRS</span>
+            <span class="proof-metric-label">Transepidermal Moisture Lock</span>
+            <span class="proof-metric-sub">[CORNEOMETER BARRIER EVALUATION]</span>
+          </div>
+
+          <div class="proof-metric-item">
+            <span class="proof-metric-num">0.00%</span>
+            <span class="proof-metric-label">Zero Water Dilution or Silicones</span>
+            <span class="proof-metric-sub">[100% ACTIVE BOTANICAL NECTARS]</span>
+          </div>
+
+          <div class="proof-metric-item">
+            <span class="proof-metric-num">100%</span>
+            <span class="proof-metric-label">Cold-Pressed Wild Harvest</span>
+            <span class="proof-metric-sub">[PEAK CIRCADIAN HARVESTING • VALAIS]</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Editorial Press Marquee -->
+    <section class="press-ticker-section" aria-label="Editorial Accolades">
+      <div class="press-ticker-track">
+        <div class="press-item">
+          <span class="press-pub">Vogue</span>
+          <span>“The next great frontier of high-performance botanical alchemy.”</span>
+          <span class="press-star">✦</span>
+        </div>
+        <div class="press-item">
+          <span class="press-pub">Harper’s Bazaar</span>
+          <span>“An ethereal glow in a glass dropper. Our holy grail discovery.”</span>
+          <span class="press-star">✦</span>
+        </div>
+        <div class="press-item">
+          <span class="press-pub">Elle</span>
+          <span>“Finally, clean skincare that outperforms clinical retinols.”</span>
+          <span class="press-star">✦</span>
+        </div>
+        <div class="press-item">
+          <span class="press-pub">Vanity Fair</span>
+          <span>“The bespoke beauty secret on every aesthetician’s vanity.”</span>
+          <span class="press-star">✦</span>
+        </div>
+        <!-- Infinite Duplicate Track -->
+        <div class="press-item">
+          <span class="press-pub">Vogue</span>
+          <span>“The next great frontier of high-performance botanical alchemy.”</span>
+          <span class="press-star">✦</span>
+        </div>
+        <div class="press-item">
+          <span class="press-pub">Harper’s Bazaar</span>
+          <span>“An ethereal glow in a glass dropper. Our holy grail discovery.”</span>
+          <span class="press-star">✦</span>
+        </div>
+        <div class="press-item">
+          <span class="press-pub">Elle</span>
+          <span>“Finally, clean skincare that outperforms clinical retinols.”</span>
+          <span class="press-star">✦</span>
+        </div>
+        <div class="press-item">
+          <span class="press-pub">Vanity Fair</span>
+          <span>“The bespoke beauty secret on every aesthetician’s vanity.”</span>
+          <span class="press-star">✦</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         4. PROBLEM & SOLUTION ASYMMETRIC SPLIT: The Conventional Trap vs. The Élan Protocol
+         ========================================================================== -->
+    <section class="problem-solution-section" id="problem-solution" aria-label="Why Modern Skincare Failed Your Skin">
+      <div class="container">
+        <div style="text-align: center; max-width: 740px; margin: 0 auto;">
+          <span class="mono-tag">[THE INDUSTRY CONTRADICTION]</span>
+          <h2 class="section-title" style="margin-top: 1rem;">Why Most Skincare Fails to <em>Heal the Barrier</em></h2>
+          <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">
+            Most luxury products dilute potent botanical actives in 85% water and cheap emulsifiers. Here is the difference between conventional cosmetic marketing and genuine cellular biocompatibility.
+          </p>
+        </div>
+
+        <div class="split-comparison-grid">
+          <!-- The Conventional Skincare Trap -->
+          <div class="trap-card">
+            <div class="trap-tag">✕ The Conventional Skincare Trap</div>
+            <h3 class="trap-title">Diluted Fillers & Disrupted Acid Mantles</h3>
+            <p style="font-size: 0.95rem; color: rgba(247, 222, 222, 0.78); line-height: 1.7;">
+              Formulated for infinite supermarket shelf-life rather than cellular harmony.
+            </p>
+            <ul class="trap-list">
+              <li class="trap-item">
+                <span class="trap-icon">✕</span>
+                <div>
+                  <strong>85% Purified Water Dilution:</strong> You pay luxury prices for tap water, chemical thickeners, and cheap silicones that temporarily mask dryness without cellular nourishment.
+                </div>
+              </li>
+              <li class="trap-item">
+                <span class="trap-icon">✕</span>
+                <div>
+                  <strong>Aggressive Retinol Peeling:</strong> Synthetic retinoids strip the lipid moisture barrier, triggering chronic low-grade inflammation, red flaking, and photo-sensitivity.
+                </div>
+              </li>
+              <li class="trap-item">
+                <span class="trap-icon">✕</span>
+                <div>
+                  <strong>Synthetic Perfumes & Parabens:</strong> Artificial masking fragrances that disrupt the skin microbiome and trigger allergic contact sensitization.
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- The Élan Protocol -->
+          <div class="protocol-card">
+            <div class="protocol-tag">✦ The Élan Botanical Protocol</div>
+            <h3 class="protocol-title">100% Undiluted Cellular Biocompatibility</h3>
+            <p style="font-size: 0.95rem; color: var(--color-cream-muted); line-height: 1.7;">
+              Formulated in hand-numbered micro-batches at natural skin-mimicking pH 5.2.
+            </p>
+            <ul class="protocol-list">
+              <li class="protocol-item">
+                <span class="protocol-icon">✓</span>
+                <div>
+                  <strong>100% Active Plant Nectar:</strong> Zero water fillers. Every single drop is dense with wild-harvested Swiss Alpine Rose Stem Cells and Jeju Camellia Omegas.
+                </div>
+              </li>
+              <li class="protocol-item">
+                <span class="protocol-icon">✓</span>
+                <div>
+                  <strong>2% Natural Bakuchiol (Zero Purge):</strong> Clinically matches prescription retinol’s collagen stimulation without peeling, redness, or sun toxicity. Safe for day use and pregnancy.
+                </div>
+              </li>
+              <li class="protocol-item">
+                <span class="protocol-icon">✓</span>
+                <div>
+                  <strong>Biomimetic Lipid Restoration:</strong> Molecular structure mimics human skin sebum, sinking deep into the dermal matrix in under 45 seconds with zero greasy shine.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FEATURE SHOWCASE: Bento Grid of 4 Core Outcomes
+         ========================================================================== -->
+    <section class="bento-section" id="features" aria-label="Feature Showcase">
+      <div class="container">
+        <div style="text-align: center; max-width: 720px; margin: 0 auto;">
+          <span class="mono-tag">[CLINICAL OUTCOME ARCHITECTURE]</span>
+          <h2 class="section-title" style="margin-top: 1rem;">Engineered for <em>Visible Transformation</em></h2>
+          <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">
+            Four distinct clinical benefits calibrated to reverse dullness, fortify depleted lipid mantles, and awaken an undeniable lit-from-within luminosity.
+          </p>
+        </div>
+
+        <div class="bento-grid">
+          <!-- Bento 1: Wide 2-Column Spotlight -->
+          <div class="bento-card wide-2">
+            <div class="bento-mono-header">
+              <span class="mono-tag">[OUTCOME_01]</span>
+              <span class="mono-tag rose">[45_SEC ABSORPTION]</span>
+            </div>
+            <h3 class="bento-title">Instant Golden-Hour Glow Without Greasiness</h3>
+            <p class="bento-desc">
+              Unlike heavy oils that sit suffocatingly on top of pores, our cold-pressed tsubaki camellia mimics the natural lipid profile of youthful skin. It absorbs in under 45 seconds, transforming dull, fatigued skin into a cushiony, lit-from-within porcelain finish that glows even without makeup.
+            </p>
+            <div class="bento-visual-preview">
+              <div style="font-size: 0.85rem; color: var(--color-sage-light);">
+                <strong>Clinical Dermal Profiling:</strong> Non-comedogenic score: 0/5 • Transmittance: 96%
+              </div>
+              <span class="bento-metric-highlight">+88% Radiance</span>
+            </div>
+          </div>
+
+          <!-- Bento 2: Alpine Stem Cell Longevity -->
+          <div class="bento-card">
+            <div class="bento-mono-header">
+              <span class="mono-tag">[OUTCOME_02]</span>
+              <span class="mono-tag">[ELEVATION 2,800M]</span>
+            </div>
+            <h3 class="bento-title">High-Altitude Cellular Longevity</h3>
+            <p class="bento-desc">
+              Swiss Alpine Rose stem cells thrive amidst sub-zero frost and brutal UV index. Their dehydrin proteins shield human skin stem cells from photo-aging and environmental oxidation.
+            </p>
+            <div class="bento-visual-preview">
+              <span style="font-size: 0.82rem; color: var(--color-sage);">Stem Cell Colony Efficiency</span>
+              <span class="bento-metric-highlight">+75%</span>
+            </div>
+          </div>
+
+          <!-- Bento 3: 72-Hour Barrier Lock -->
+          <div class="bento-card">
+            <div class="bento-mono-header">
+              <span class="mono-tag">[OUTCOME_03]</span>
+              <span class="mono-tag">[LIPID RESTORATION]</span>
+            </div>
+            <h3 class="bento-title">72-Hour Transepidermal Moisture Lock</h3>
+            <p class="bento-desc">
+              Infused with bio-fermented Brittany marine kelp and essential Omega-9 fatty acids that rebuild the intercellular cement of damaged or over-exfoliated barriers.
+            </p>
+            <div class="bento-visual-preview">
+              <span style="font-size: 0.82rem; color: var(--color-sage);">Corneometer Hydration Lock</span>
+              <span class="bento-metric-highlight">72 Hours</span>
+            </div>
+          </div>
+
+          <!-- Bento 4: Gentle Non-Irritating Renewal -->
+          <div class="bento-card wide-2">
+            <div class="bento-mono-header">
+              <span class="mono-tag">[OUTCOME_04]</span>
+              <span class="mono-tag rose">[ZERO RETINOL PURGE]</span>
+            </div>
+            <h3 class="bento-title">Clinical Collagen Stimulation with Zero Redness</h3>
+            <p class="bento-desc">
+              2% Medical-Grade Natural Bakuchiol activates the exact same cellular gene pathways as prescription retinoids to smooth fine lines and firm texture, without erythema, peeling, or photosensitivity. Completely safe for morning application, sensitive skin, and pregnancy.
+            </p>
+            <div class="bento-visual-preview">
+              <div style="font-size: 0.85rem; color: var(--color-sage-light);">
+                <strong>Dermatological Safety:</strong> 100% Hypoallergenic • Zero Purging • Non-Phototoxic
+              </div>
+              <span class="bento-metric-highlight">97% Smoother</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         5. HOW IT WORKS: Simple 3-Step Rapid Value Breakdown
+         ========================================================================== -->
+    <section class="how-it-works-section" id="how-it-works" aria-label="How the Ritual Works">
+      <div class="container">
+        <div style="text-align: center; max-width: 720px; margin: 0 auto;">
+          <span class="mono-tag">[THE 3-STEP CONVERSION RITUAL]</span>
+          <h2 class="section-title" style="margin-top: 1rem;">Effortless Ritual, <em>Immediate Transformation</em></h2>
+          <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">
+            Designed to integrate seamlessly into your morning and evening sanctuary in under 60 seconds.
+          </p>
+        </div>
+
+        <div class="how-steps-grid">
+          <!-- Step 1 -->
+          <div class="how-step-card">
+            <span class="how-step-badge">[STEP_01 • T+0 SECONDS]</span>
+            <h3 class="how-step-title">Warm & Activate</h3>
+            <p class="how-step-desc">
+              Dispense 3 ceremonial drops of The Luminous Elixir into clean palms. Rub hands together gently for 3 seconds to warm the nectar and activate volatile botanical terpenes.
+            </p>
+            <div class="how-step-outcome">
+              ✦ SENSORY: Natural Damask rose petals, crushed bergamot & cedar
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="how-step-card">
+            <span class="how-step-badge">[STEP_02 • T+45 SECONDS]</span>
+            <h3 class="how-step-title">Press & Absorb</h3>
+            <p class="how-step-desc">
+              Gently press palms across forehead, cheeks, jawline, neck, and décolleté in upward sweeping motions. The silk lipid matrix penetrates the dermal barrier in under 45 seconds.
+            </p>
+            <div class="how-step-outcome">
+              ✦ RESULT: Zero greasy residue, weightless cashmere skin glide
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="how-step-card">
+            <span class="how-step-badge">[STEP_03 • T+14 DAYS]</span>
+            <h3 class="how-step-title">Awaken & Transform</h3>
+            <p class="how-step-desc">
+              Wake up every morning with a noticeably dewy, bouncy complexion. By Day 14, clinical studies demonstrate reinforced lipid density and smoothed micro-texture.
+            </p>
+            <div class="how-step-outcome">
+              ✦ PROOF: 98% of clinical trial panelists noted lit-from-within glow
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         THE CORE COLLECTION: Product Cards & Quick View Modal
+         ========================================================================== -->
+    <section class="collection-section" id="collection" aria-label="The Sacred Collection">
+      <div class="container">
+        <div class="collection-header">
+          <span class="mono-tag">[MICRO-BATCH COLLECTION]</span>
+          <h2 class="section-title" style="margin-top: 1rem;">The Sacred <em>Core Collection</em></h2>
+          <p class="section-subtitle">
+            Every formulation is hand-blended in small numbered runs in Geneva and Provence, combining unadulterated cold-pressed botanicals with clinical biocompatible actives.
+          </p>
+
+          <div class="collection-filters">
+            <button class="filter-btn active" data-filter="all">All Formulations</button>
+            <button class="filter-btn" data-filter="serums">Serums & Elixirs</button>
+            <button class="filter-btn" data-filter="moisturizers">Moisturizers</button>
+            <button class="filter-btn" data-filter="cleansers">Cleansers</button>
+            <button class="filter-btn" data-filter="treatments">Treatments</button>
+          </div>
+        </div>
+
+        <div class="products-grid" id="products-grid">
+          <!-- Populated dynamically via main.js from config.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         6. SOCIAL PROOF & CONCRETE CASE STUDIES
+         ========================================================================== -->
+    <section class="reviews-section" id="reviews" aria-label="Client Testimonials and Case Studies">
+      <div class="container">
+        <div style="text-align: center; max-width: 680px; margin: 0 auto 3.5rem;">
+          <span class="mono-tag">[VERIFIED CLINICAL EVIDENCE]</span>
+          <h2 class="section-title" style="margin-top: 1rem;">Loved by Skin of <em>Every Generation</em></h2>
+          <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">
+            From Paris to Zurich to New York, discover how our botanical elixirs have restored health, confidence, and radiance.
+          </p>
+        </div>
+
+        <div class="reviews-grid">
+          <!-- Case Study 1 -->
+          <div class="review-card">
+            <div class="review-header">
+              <div class="stars">★★★★★</div>
+              <span class="mono-tag">[CASE STUDY #01]</span>
+            </div>
+            <h3 class="review-title">“Worth every single cent. My partner asked if I had had a professional facial.”</h3>
+            <p class="review-text">
+              “I struggled with persistent winter dullness and dry flaking after transatlantic travel. Within three days of using The Luminous Elixir morning and night, my skin texture was completely renewed. It smells like a misty rose garden in Grasse and absorbs instantaneously.”
+            </p>
+            <div class="review-author-row">
+              <div class="author-info">
+                <span class="author-name">Genevieve R.</span>
+                <span class="author-detail">Paris, France • Dry / Sensitive Skin • Age 34</span>
+              </div>
+              <span class="verified-badge">✓ Verified Buyer</span>
+            </div>
+          </div>
+
+          <!-- Case Study 2: Dermatologist -->
+          <div class="review-card">
+            <div class="review-header">
+              <div class="stars">★★★★★</div>
+              <span class="mono-tag">[CLINICAL EVALUATION]</span>
+            </div>
+            <h3 class="review-title">“As a dermatologist, I am thoroughly impressed by this formulation.”</h3>
+            <p class="review-text">
+              “The biomimetic ceramide and alpine phytocell profile in this nectar is exceptional. It repaired post-laser compromised skin barriers in half the usual clinical recovery window. Unlike petroleum ointments, it truly integrates with the lipid mantle without clogging pores.”
+            </p>
+            <div class="review-author-row">
+              <div class="author-info">
+                <span class="author-name">Dr. Evelyn M.</span>
+                <span class="author-detail">Zurich, Switzerland • Board-Certified Dermatologist</span>
+              </div>
+              <span class="verified-badge">✓ Verified Patron</span>
+            </div>
+          </div>
+
+          <!-- Case Study 3 -->
+          <div class="review-card">
+            <div class="review-header">
+              <div class="stars">★★★★★</div>
+              <span class="mono-tag">[CASE STUDY #03]</span>
+            </div>
+            <h3 class="review-title">“Replaced my prescription retinol permanently. Zero redness, just glow.”</h3>
+            <p class="review-text">
+              “The bakuchiol in this formula is pure alchemy. Zero purging, zero peeling, just smooth, plump, luminous skin that looks glowing even without foundation. The hand-numbered bottle on my bathroom vanity looks like a sculpted work of art.”
+            </p>
+            <div class="review-author-row">
+              <div class="author-info">
+                <span class="author-name">Sienna K.</span>
+                <span class="author-detail">San Francisco, CA • Combination Skin • Age 29</span>
+              </div>
+              <span class="verified-badge">✓ Verified Buyer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SKIN RITUAL FINDER (DIAGNOSTIC QUIZ)
+         ========================================================================== -->
+    <section class="quiz-section" id="ritual-finder" aria-label="Interactive Skin Ritual Diagnostic">
+      <div class="container">
+        <div style="text-align: center; max-width: 680px; margin: 0 auto 3rem;">
+          <span class="mono-tag">[DIAGNOSTIC CALIBRATION]</span>
+          <h2 class="section-title" style="margin-top: 1rem;">Discover Your <em>Personalized Ritual</em></h2>
+          <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">
+            Answer 3 intuitive questions to reveal the customized botanical regimen calibrated to your skin's unique cellular rhythm.
+          </p>
+        </div>
+
+        <div id="quiz-container">
+          <!-- Quiz dynamically rendered via quiz.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         7. FINAL HIGH-CONTRAST CLOSING CTA SECTION
+         ========================================================================== -->
+    <section class="final-conversion-section" id="final-cta" aria-label="Begin Your Transformation">
+      <div class="container">
+        <div class="final-cta-card">
+          <!-- Scarcity / Allocation Pill -->
+          <div class="final-scarcity-pill">
+            <span class="hero-badge-dot"></span>
+            <span>[LIMITED HARVEST ALLOCATION • BATCH NO. 04: ONLY 68 BOTTLES REMAINING]</span>
+          </div>
+
+          <h2 class="final-title">
+            Your 30-Day Radiant <em>Transformation Awaits</em>
+          </h2>
+
+          <p class="final-copy">
+            Experience the sacred collision of high-altitude Swiss botany and cellular science. If your skin does not look noticeably more radiant, firm, and healthy in 30 days, we will refund every penny with our Empty-Bottle Guarantee.
+          </p>
+
+          <div class="final-cta-btns">
+            <button class="btn btn-primary btn-gold-shimmer" onclick="document.getElementById('hero-shop-btn').click()">
+              Claim The Luminous Elixir — $148
+            </button>
+            <a href="#ritual-finder" class="btn btn-outline">
+              Take the 30-Second Skin Quiz
+            </a>
+          </div>
+
+          <div class="final-guarantee-row">
+            <span><strong>✓</strong> 30-Day Empty-Bottle Guarantee</span>
+            <span><strong>✓</strong> Complimentary Worldwide Shipping over $120</span>
+            <span><strong>✓</strong> 100% Leaping Bunny Cruelty-Free</span>
+            <span><strong>✓</strong> Hand-Numbered Bottles</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section class="faq-section" id="faq" aria-label="Frequently Asked Questions">
+      <div class="container">
+        <div style="text-align: center; max-width: 680px; margin: 0 auto;">
+          <span class="mono-tag">[OBJECTION HANDLING & CONCIERGE]</span>
+          <h2 class="section-title" style="margin-top: 1rem;">Frequently Asked <em>Questions</em></h2>
+          <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">
+            Everything you need to know about our sourcing, clinical potency, and 30-Day Luminous Guarantee.
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item active">
+            <button class="faq-question-btn">
+              <span>Are Élan Botanique formulas suitable for highly sensitive skin?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. All our products are dermatologically evaluated, non-comedogenic, and hypoallergenic. We eschew synthetic perfumes, drying alcohols, essential oil overdoses, and harsh chemical preservatives. We recommend a 24-hour patch test before full facial application.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn">
+              <span>How does natural Bakuchiol compare to traditional Retinol?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Bakuchiol is a botanical active extracted from the Ayurvedic Babchi plant. Clinical trials demonstrate it activates the same cellular collagen synthesis pathways as prescription retinol, without causing erythema, photo-sensitivity, or peeling. It is completely safe for daytime use and during pregnancy.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn">
+              <span>How long does a 30ml bottle of The Luminous Elixir last?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Because our formulation is 100% active with zero water fillers, only 3-4 drops are required per ritual. Used twice daily, a 30ml bottle provides approximately 60 to 75 days of sacred daily care.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn">
+              <span>What is your 30-Day Luminous Guarantee?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>We believe deeply in our botanical alchemy. If your skin does not visibly transform with radiant hydration and vitality within 30 days of receiving your order, we will gladly arrange a full refund with complimentary return shipping.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Clean Footer Columns -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <div class="brand-logo">
+            <span class="brand-logo-text">ÉLAN BOTANIQUE</span>
+            <span class="brand-logo-sub">HAUTE SKINCARE • GENEVA & PROVENCE</span>
+          </div>
+          <p class="footer-desc">
+            Formulated at the intersection of high-altitude alpine botany and bio-cellular medicine. Hand-crafted in micro-batches with reverence for skin and earth.
+          </p>
+          <div class="footer-badges-list">
+            <span class="footer-badge-pill">Leaping Bunny</span>
+            <span class="footer-badge-pill">Ecocert Organic</span>
+            <span class="footer-badge-pill">FSC Packaging</span>
+            <span class="footer-badge-pill">Carbon Neutral</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">The Collection</h4>
+          <ul class="footer-links-list">
+            <li><a href="#collection" class="footer-link">The Luminous Elixir</a></li>
+            <li><a href="#collection" class="footer-link">Velvet Barrier Cream</a></li>
+            <li><a href="#collection" class="footer-link">Celestial Cleansing Nectar</a></li>
+            <li><a href="#collection" class="footer-link">Botanical Eye Infusion</a></li>
+            <li><a href="#collection" class="footer-link">Verdant Cellular Mist</a></li>
+            <li><a href="#collection" class="footer-link">Night Metamorphosis Mask</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Science & Proof</h4>
+          <ul class="footer-links-list">
+            <li><a href="#features" class="footer-link">Alpine Phytocells</a></li>
+            <li><a href="#features" class="footer-link">Cold-Pressed Camellia</a></li>
+            <li><a href="#features" class="footer-link">72-Hour Moisture Lock</a></li>
+            <li><a href="#how-it-works" class="footer-link">The 45-Second Ritual</a></li>
+            <li><a href="#reviews" class="footer-link">Clinical 28-Day Trials</a></li>
+            <li><a href="#ritual-finder" class="footer-link">Skin Diagnostic Quiz</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Sanctuary Concierge</h4>
+          <ul class="footer-links-list">
+            <li><a href="#faq" class="footer-link">Concierge FAQ</a></li>
+            <li><a href="#faq" class="footer-link">30-Day Empty-Bottle Guarantee</a></li>
+            <li><a href="#faq" class="footer-link">Worldwide Shipping</a></li>
+            <li><a href="#" class="footer-link">Batch No. 04 Verification</a></li>
+            <li><a href="#" class="footer-link">Privacy & Disclosures</a></li>
+            <li><a href="#" class="footer-link">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-row">
+        <span>© 2026 ÉLAN BOTANIQUE INC. All Rights Reserved. Crafted with reverence.</span>
+
+        <!-- Accessibility Motion Toggle -->
+        <button class="footer-accessibility-toggle" id="reduced-motion-toggle" aria-label="Toggle motion preferences">
+          <span>✦ Motion: <strong>Full Fluid</strong></span>
+        </button>
+
+        <span class="mono-tag">[GENEVA • PARIS • NEW YORK]</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-Over Cart Drawer -->
+  <div class="cart-overlay" id="cart-overlay" aria-hidden="true"></div>
+
+  <aside class="cart-drawer" id="cart-drawer" role="dialog" aria-label="Shopping Ritual Bag" aria-hidden="true">
+    <div class="cart-header">
+      <h3 class="cart-header-title">Your Ritual Bag</h3>
+      <button class="cart-close-btn" data-action="close-cart" aria-label="Close cart">&times;</button>
+    </div>
+
+    <div class="cart-shipping-bar-wrap">
+      <div class="free-shipping-text" id="free-shipping-text">
+        Add <strong>$120</strong> to unlock complimentary shipping.
+      </div>
+      <div class="shipping-progress-bg">
+        <div class="shipping-progress-fill" id="free-shipping-progress" style="width: 0%;"></div>
+      </div>
+    </div>
+
+    <div class="cart-items-container" id="cart-items-container">
+      <!-- Populated via cart.js -->
+    </div>
+
+    <div class="cart-empty-state" id="cart-empty-state" style="display: none;">
+      <p style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 0.5rem;">Your Sanctuary Bag is Empty</p>
+      <p style="font-size: 0.88rem; color: var(--color-sage-light); margin-bottom: 2rem;">Discover our high-altitude botanical formulations to begin your ritual.</p>
+      <button class="btn btn-primary" data-action="close-cart">Explore Formulations</button>
+    </div>
+
+    <div class="cart-footer" id="cart-footer-details">
+      <form class="promo-form" id="cart-promo-form">
+        <input type="text" class="promo-input" id="cart-promo-input" placeholder="Promo code (try BOTANICAL15)" />
+        <button type="submit" class="promo-btn">Apply</button>
+      </form>
+      <div class="promo-feedback" id="cart-promo-msg"></div>
+
+      <div class="cart-summary-row">
+        <span>Subtotal</span>
+        <strong id="cart-subtotal-val">$0</strong>
+      </div>
+      <div class="cart-summary-row" id="cart-discount-row" style="display: none; color: #79d2a6;">
+        <span>VIP Savings</span>
+        <strong id="cart-discount-val">-$0</strong>
+      </div>
+      <div class="cart-summary-row">
+        <span>Worldwide Shipping</span>
+        <span id="cart-shipping-val">Calculated at checkout</span>
+      </div>
+      <div class="cart-summary-row total">
+        <span>Estimated Total</span>
+        <strong id="cart-total-val">$0</strong>
+      </div>
+
+      <button class="btn btn-primary btn-gold-shimmer btn-block" id="cart-checkout-btn" style="margin-top: 1.25rem;">
+        Proceed to Sacred Checkout
+      </button>
+    </div>
+  </aside>
+
+  <!-- Product Quick View Modal -->
+  <div class="quickview-modal" id="quickview-modal" role="dialog" aria-label="Product Formulation Details" aria-hidden="true">
+    <div class="quickview-backdrop" data-action="close-quickview"></div>
+    <div class="quickview-dialog">
+      <button class="quickview-close" data-action="close-quickview" aria-label="Close dialog">&times;</button>
+      <div class="quickview-body">
+        <!-- Rendered dynamically by quickview.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive 45-Second Ritual Modal -->
+  <div class="ritual-video-modal" id="ritual-video-modal" role="dialog" aria-label="45-Second Ritual Experience" aria-hidden="true">
+    <div class="ritual-modal-backdrop" id="ritual-modal-backdrop"></div>
+    <div class="ritual-modal-box">
+      <button class="ritual-modal-close" id="ritual-modal-close-btn">&times;</button>
+      <span class="mono-tag" style="margin-bottom: 1rem;">[THE 45-SECOND SACRED APPLICATION]</span>
+      <h3 style="font-family: var(--font-serif); font-size: 2.2rem; margin-bottom: 0.75rem;">Awakening Cellular Radiance</h3>
+      <p style="color: var(--color-cream-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem;">
+        Watch the ceremonial protocol performed by our lead aesthetician at the Geneva Botanical Sanctuary.
+      </p>
+
+      <!-- Video / Animated Demonstration Player Simulation -->
+      <div style="aspect-ratio: 16/9; background: #06110c; border: 1px solid var(--color-gold); border-radius: 18px; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; margin-bottom: 2rem;">
+        <div style="font-size: 3rem; color: var(--color-gold); margin-bottom: 1rem; animation: pulseDot 2s infinite;">✦</div>
+        <div style="font-family: var(--font-serif); font-size: 1.4rem; color: var(--color-gold-light);">The Luminous Elixir Ritual</div>
+        <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-sage-light); margin-top: 0.5rem;">45-SECOND GUIDED MEDITATION</div>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+        <span class="mono-tag">[RECOMMENDED: MORNING & EVENING]</span>
+        <button class="btn btn-primary" onclick="document.getElementById('ritual-video-modal').classList.remove('visible'); document.getElementById('hero-shop-btn').click();">
+          Claim The Luminous Elixir — $148
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Master JavaScript Application -->
+  <script type="module" src="/src/scripts/main.js"></script>
+  <script type="module">
+    // Bind 45-Second Ritual Modal Trigger
+    const ritualModal = document.getElementById('ritual-video-modal');
+    const openBtn = document.getElementById('btn-open-ritual-modal');
+    const closeBtn = document.getElementById('ritual-modal-close-btn');
+    const backdrop = document.getElementById('ritual-modal-backdrop');
+
+    if (openBtn && ritualModal) {
+      openBtn.addEventListener('click', () => {
+        ritualModal.classList.add('visible');
+        document.body.style.overflow = 'hidden';
+      });
+    }
+
+    const closeModal = () => {
+      ritualModal?.classList.remove('visible');
+      document.body.style.overflow = '';
+    };
+
+    closeBtn?.addEventListener('click', closeModal);
+    backdrop?.addEventListener('click', closeModal);
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+  </script>
+</body>
+</html>
